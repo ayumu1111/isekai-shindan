@@ -45,22 +45,25 @@ async function shareResult() {
   if (!currentResultState) return;
   const { scores, specialKey, catchphrase, name, imageKey } = currentResultState;
   const url = `${location.origin}${location.pathname}?${encodeResult(scores, specialKey)}`;
-  const text = `異世界転生後の職業診断、結果は「${catchphrase}」でした！`;
+  const text = `異世界転生診断、結果は「${catchphrase}」でした！`;
 
   let file = null;
   try {
-    const blob = await ShareCard.build({ name, catchphrase, imageKey });
+    const blob = await ShareCard.build({ name, catchphrase, imageKey, scores, rankTable: DATA.bigfive.meta.rankTable });
     if (blob) file = new File([blob], 'isekai-shindan-result.png', { type: 'image/png' });
   } catch (e) { /* 画像生成に失敗してもテキスト共有にフォールバックする */ }
 
   if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+    // 画像(files)付きの共有は、送信先アプリによってurlフィールドが無視されることがあるため
+    // テキスト側にもURLを埋め込んで、リンクが必ず残るようにする
+    const textWithUrl = `${text}\n${url}`;
     try {
-      await navigator.share({ title: '異世界転生後の職業診断', text, url, files: [file] });
+      await navigator.share({ title: '異世界転生診断', text: textWithUrl, files: [file] });
     } catch (e) { /* ユーザーによるキャンセル等は無視 */ }
     return;
   }
   if (navigator.share) {
-    try { await navigator.share({ title: '異世界転生後の職業診断', text, url }); } catch (e) { /* 同上 */ }
+    try { await navigator.share({ title: '異世界転生診断', text, url }); } catch (e) { /* 同上 */ }
     return;
   }
   // Web Share API非対応環境: 画像はダウンロード、Xは投稿画面を開く自己申告フォールバック
