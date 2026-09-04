@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>異世界転生後の職業診断</title>
 <meta name="description" content="29の質問に答えて、あなたが異世界に転生したらどんな職業になるかを診断します。">
+<!-- 以下のOGP/Twitterタグは、シェア結果URL(?s=...)へのクローラーアクセス時のみ
+     Cloudflare Workerが結果に応じた内容に書き換える。既定値はサイト全体の代表値。 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="異世界転生後の職業診断">
+<meta property="og:url" content="https://isekai-tensei-shindan.com/">
+<meta property="og:title" content="異世界転生後の職業診断">
+<meta property="og:description" content="29の質問に答えて、あなたが異世界に転生したらどんな職業になるかを診断します。">
+<meta property="og:image" content="https://isekai-tensei-shindan.com/images/bg-guild.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="異世界転生後の職業診断">
+<meta name="twitter:description" content="29の質問に答えて、あなたが異世界に転生したらどんな職業になるかを診断します。">
+<meta name="twitter:image" content="https://isekai-tensei-shindan.com/images/bg-guild.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -124,6 +136,7 @@
 <script src="js/engine.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/result.js"></script>
+<script src="js/share-card.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -28,9 +28,9 @@ function startQuiz() {
 function handleQuizDone(answersMap) {
   const { scores, skipRate, dontKnowRate } = scoreAnswers(answersMap, DATA.questions);
   const specialKey = resolveSpecial(skipRate, dontKnowRate);
-  currentResultState = { scores, specialKey };
   history.replaceState(null, '', `${location.pathname}?${encodeResult(scores, specialKey)}`);
-  Result.render(DATA, { scores, specialKey, isShared: false });
+  const rendered = Result.render(DATA, { scores, specialKey, isShared: false });
+  currentResultState = { scores, specialKey, ...rendered };
   showScreen('screen-result');
 }
 
@@ -43,15 +43,39 @@ function restartQuiz() {
 
 async function shareResult() {
   if (!currentResultState) return;
-  const url = `${location.origin}${location.pathname}?${encodeResult(currentResultState.scores, currentResultState.specialKey)}`;
-  const catchphrase = document.getElementById('resultCatchphrase').textContent;
+  const { scores, specialKey, catchphrase, name, imageKey } = currentResultState;
+  const url = `${location.origin}${location.pathname}?${encodeResult(scores, specialKey)}`;
   const text = `異世界転生後の職業診断、結果は「${catchphrase}」でした！`;
-  if (navigator.share) {
-    try { await navigator.share({ title: '異世界転生後の職業診断', text, url }); } catch (e) { /* ユーザーによるキャンセル等は無視 */ }
-  } else {
-    const intent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-    window.open(intent, '_blank', 'noopener');
+
+  let file = null;
+  try {
+    const blob = await ShareCard.build({ name, catchphrase, imageKey });
+    if (blob) file = new File([blob], 'isekai-shindan-result.png', { type: 'image/png' });
+  } catch (e) { /* 画像生成に失敗してもテキスト共有にフォールバックする */ }
+
+  if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+    try {
+      await navigator.share({ title: '異世界転生後の職業診断', text, url, files: [file] });
+    } catch (e) { /* ユーザーによるキャンセル等は無視 */ }
+    return;
   }
+  if (navigator.share) {
+    try { await navigator.share({ title: '異世界転生後の職業診断', text, url }); } catch (e) { /* 同上 */ }
+    return;
+  }
+  // Web Share API非対応環境: 画像はダウンロード、Xは投稿画面を開く自己申告フォールバック
+  if (file) {
+    const dlUrl = URL.createObjectURL(file);
+    const a = document.createElement('a');
+    a.href = dlUrl;
+    a.download = 'isekai-shindan-result.png';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(dlUrl), 4000);
+  }
+  const intent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+  window.open(intent, '_blank', 'noopener');
 }
 
 function wireEvents() {
@@ -67,8 +91,8 @@ async function bootstrap() {
 
   const shared = decodeResult(location.search);
   if (shared) {
-    currentResultState = { scores: shared.scores, specialKey: shared.special };
-    Result.render(DATA, { scores: shared.scores, specialKey: shared.special, isShared: true });
+    const rendered = Result.render(DATA, { scores: shared.scores, specialKey: shared.special, isShared: true });
+    currentResultState = { scores: shared.scores, specialKey: shared.special, ...rendered };
     showScreen('screen-result');
   } else {
     showScreen('screen-intro');
