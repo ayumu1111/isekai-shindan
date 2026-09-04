@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "異世界転生後の職業診断 personalityCatchphrase",
+    "description": "診断結果ページで表示する、解答者の最高スコア因子×最低スコア因子に基づく二つ名形式のキャッチコピー。キャラ非依存（因子の組み合わせのみに紐づく）。",
+    "fieldName": "personalityCatchphrase",
+    "combinations": "5因子×4因子（最高≠最低）＝20通り",
+    "format": "二つ名形式。前半に最高因子由来の肩書き、後半（または一語）に最低因子由来の落とし。短くユーモラスに。",
+    "factorLabels": {
+      "openness": "開放性",
+      "conscientiousness": "誠実性",
+      "extraversion": "外向性",
+      "agreeableness": "調和性",
+      "sensitivity": "繊細さ"
+    }
+  },
+  "catchphrases": [
+    { "highest": "openness", "lowest": "conscientiousness", "text": "三日坊主の発明家" },
+    { "highest": "openness", "lowest": "extraversion", "text": "無口な夢想家" },
+    { "highest": "openness", "lowest": "agreeableness", "text": "孤高の変わり者" },
+    { "highest": "openness", "lowest": "sensitivity", "text": "無敵の思いつき屋" },
+    { "highest": "conscientiousness", "lowest": "openness", "text": "融通の利かない職人" },
+    { "highest": "conscientiousness", "lowest": "extraversion", "text": "寡黙な完璧主義者" },
+    { "highest": "conscientiousness", "lowest": "agreeableness", "text": "空気を読まない優等生" },
+    { "highest": "conscientiousness", "lowest": "sensitivity", "text": "鋼メンタルの事務員" },
+    { "highest": "extraversion", "lowest": "openness", "text": "話題の少ない人気者" },
+    { "highest": "extraversion", "lowest": "conscientiousness", "text": "遅刻常習の人気者" },
+    { "highest": "extraversion", "lowest": "agreeableness", "text": "頑固なムードメーカー" },
+    { "highest": "extraversion", "lowest": "sensitivity", "text": "図太い盛り上げ役" },
+    { "highest": "agreeableness", "lowest": "openness", "text": "お人好しの保守派" },
+    { "highest": "agreeableness", "lowest": "conscientiousness", "text": "断れない遅刻魔" },
+    { "highest": "agreeableness", "lowest": "extraversion", "text": "縁の下の気配り屋" },
+    { "highest": "agreeableness", "lowest": "sensitivity", "text": "他人想いの雑な人" },
+    { "highest": "sensitivity", "lowest": "openness", "text": "繊細な保守派" },
+    { "highest": "sensitivity", "lowest": "conscientiousness", "text": "気づき上手の先延ばし魔" },
+    { "highest": "sensitivity", "lowest": "extraversion", "text": "内に秘めた繊細さん" },
+    { "highest": "sensitivity", "lowest": "agreeableness", "text": "敏感な頑固者" }
+  ]
+}

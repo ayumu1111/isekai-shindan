@@ -1,0 +1,1064 @@
+{
+  "meta": {
+    "title": "異世界転生後の職業診断 Big5データ",
+    "scale": {
+      "min": 1,
+      "max": 7,
+      "midpoint": 4
+    },
+    "factors": [
+      "openness",
+      "conscientiousness",
+      "extraversion",
+      "agreeableness",
+      "sensitivity"
+    ],
+    "factorLabels": {
+      "openness": "開放性",
+      "conscientiousness": "誠実性",
+      "extraversion": "外向性",
+      "agreeableness": "調和性",
+      "sensitivity": "繊細さ"
+    },
+    "rankTable": [
+      {
+        "min": 6.5,
+        "rank": "SS"
+      },
+      {
+        "min": 6.0,
+        "rank": "S"
+      },
+      {
+        "min": 5.0,
+        "rank": "A"
+      },
+      {
+        "min": 4.0,
+        "rank": "B"
+      },
+      {
+        "min": 3.0,
+        "rank": "C"
+      },
+      {
+        "min": 2.0,
+        "rank": "D"
+      },
+      {
+        "min": 1.0,
+        "rank": "E"
+      }
+    ],
+    "note": "ランクは特性の強さを表すものであり、優劣ではない"
+  },
+  "characters": [
+    {
+      "imageKey": "n_farmer",
+      "name": "畑仕事の農民",
+      "rarity": "N",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 7,
+        "extraversion": 2,
+        "agreeableness": 5,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "新しい農法の噂を聞いても、まず疑ってかかる",
+        "conscientiousness": "日の出前に起きなかった日を、本人も家族も思い出せない",
+        "extraversion": "土に話しかける頻度の方が、人に話しかける頻度より高い",
+        "agreeableness": "頼まれごとを断ったことがなく、隣家の畑まで面倒を見ている",
+        "sensitivity": "雨が降らなくても慌てない。慌てるのは三日目からと決めている"
+      }
+    },
+    {
+      "imageKey": "n_shepherd-boy",
+      "name": "羊追いの少年",
+      "rarity": "N",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 4,
+        "extraversion": 5,
+        "agreeableness": 5,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "知らない丘の向こうも、羊が行くなら着いていく",
+        "conscientiousness": "数え忘れはあるが、日が暮れる前には必ず思い出す",
+        "extraversion": "羊にも旅人にも岩にも、同じ調子で話しかける",
+        "agreeableness": "はぐれた一匹を先に探すので、残り九十九匹はいつも放置される",
+        "sensitivity": "一匹いなくなっても、まず口笛を吹く。それで大体戻る"
+      }
+    },
+    {
+      "imageKey": "n_baker-third-son",
+      "name": "パン屋の三男坊",
+      "rarity": "N",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 5,
+        "extraversion": 3,
+        "agreeableness": 4,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "兄と同じ配合では作らないと決めているが、理由は意地だけだ",
+        "conscientiousness": "窯の温度だけは誰よりも正確に見る。他は割と適当",
+        "extraversion": "店先に立つと声が小さくなり、厨房に戻ると鼻歌が出る",
+        "agreeableness": "売れ残りを配る相手が固定されすぎて、もはや定期便になっている",
+        "sensitivity": "焼き上がりが気になって窯を覗きすぎ、そのせいで温度が下がる"
+      }
+    },
+    {
+      "imageKey": "n_gossip-monger",
+      "name": "井戸端の噂好き",
+      "rarity": "N",
+      "scores": {
+        "openness": 5,
+        "conscientiousness": 2,
+        "extraversion": 7,
+        "agreeableness": 4,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "新しい話が入らない日は、自分で作りかける",
+        "conscientiousness": "約束の時間より、話が長引く方をいつも優先する",
+        "extraversion": "井戸端に人が二人いれば必ず加わっている。一人でも加わる",
+        "agreeableness": "相槌の打ち方を相手ごとに変えており、その技術だけは職人級",
+        "sensitivity": "自分の噂が回っていないか、たまに本気で気にしている"
+      }
+    },
+    {
+      "imageKey": "n_cart-driver",
+      "name": "荷馬車の御者",
+      "rarity": "N",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 7,
+        "extraversion": 3,
+        "agreeableness": 4,
+        "sensitivity": 1
+      },
+      "flavors": {
+        "openness": "近道があると聞いても、通い慣れた道を選ぶ。それで遅れたことはない",
+        "conscientiousness": "積荷を落としたことがただの一度もない。居眠り中も含めて",
+        "extraversion": "客とは天気の話だけして、あとは目的地まで沈黙を貫く",
+        "agreeableness": "乗せるのは構わないが、荷が優先だと出発前に必ず宣言する",
+        "sensitivity": "悪路に入っても手綱を握る力が一切変わらない。表情も変わらない"
+      }
+    },
+    {
+      "imageKey": "n_apprentice-blacksmith",
+      "name": "見習い鍛冶屋",
+      "rarity": "N",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 5,
+        "extraversion": 3,
+        "agreeableness": 4,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "師匠の型から外れることを、まだ思いついていない",
+        "conscientiousness": "同じ角度で打ち続けられる。何本目かは途中でわからなくなる",
+        "extraversion": "炉の前では無口だが、酒場では急に武勇伝を語り出す",
+        "agreeableness": "先に持ち場を片付けるのはいつもこの男で、なぜか感謝はされない",
+        "sensitivity": "打ち損じた刃を夜になっても思い出し、布団の中で唸る"
+      }
+    },
+    {
+      "imageKey": "n_inn-servant",
+      "name": "宿屋の下働き",
+      "rarity": "N",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 5,
+        "extraversion": 5,
+        "agreeableness": 7,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "決まった手順を変える理由が、どう考えても見当たらない",
+        "conscientiousness": "頼まれた仕事を後回しにしたことがなく、そのぶん自分の飯が後回しになる",
+        "extraversion": "客の顔を覚えるのは、話しかける口実が欲しいからだ",
+        "agreeableness": "誰かが困る前に動いているので、たまに困ってもいない人を助けている",
+        "sensitivity": "客の機嫌を必要以上に気にして、必要以上に愛想笑いが増える"
+      }
+    },
+    {
+      "imageKey": "n_lost-traveler",
+      "name": "迷子の旅人",
+      "rarity": "N",
+      "scores": {
+        "openness": 7,
+        "conscientiousness": 1,
+        "extraversion": 4,
+        "agreeableness": 4,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "地図にない道の方がなぜか気になり、そちらへ行く",
+        "conscientiousness": "出発の日を決めても守らない。決めたこと自体も忘れる",
+        "extraversion": "道を尋ねるのは得意だが、聞き終えた三歩先で忘れている",
+        "agreeableness": "行き先が違っても、しばらくは一緒に歩く。かなり長く歩く",
+        "sensitivity": "迷っていることに、本人だけがまだ気づいていない"
+      }
+    },
+    {
+      "imageKey": "n_village-watchman",
+      "name": "村の見張り番",
+      "rarity": "N",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 4,
+        "extraversion": 3,
+        "agreeableness": 4,
+        "sensitivity": 5
+      },
+      "flavors": {
+        "openness": "見回りの順路を変えたことがない。変える発想がない",
+        "conscientiousness": "持ち場は決して離れない。ただしまぶたは落ちる",
+        "extraversion": "声を張るのは仕事のときだけ。私生活では驚くほど小声",
+        "agreeableness": "村の誰かのためなら夜通し立っている。頼まれてなくても立っている",
+        "sensitivity": "物音がするたび心臓が跳ね、そのたび槍を落としかける"
+      }
+    },
+    {
+      "imageKey": "n_herb-picker-girl",
+      "name": "薬草摘みの少女",
+      "rarity": "N",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 7,
+        "extraversion": 2,
+        "agreeableness": 5,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "知らない草にはまず手を出さない。ただし三日ほど観察はする",
+        "conscientiousness": "毒草と薬草を一度も取り違えていない。本人はそれを当然だと思っている",
+        "extraversion": "人といるより草むらにいる時間が長く、草の方が話しやすいらしい",
+        "agreeableness": "摘んだ薬草の半分はいつも誰かのためで、自分の分はよく足りなくなる",
+        "sensitivity": "誰かが飲んだ後、遠くから様子を窺い続けて結局眠れない"
+      }
+    },
+    {
+      "imageKey": "r_novice-swordsman",
+      "name": "見習い剣士",
+      "rarity": "R",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 6,
+        "extraversion": 4,
+        "agreeableness": 4,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "新しい型を教わっても、結局いつもの素振りに戻ってくる",
+        "conscientiousness": "素振りの回数だけは誰にも負けない。当たる回数では負ける",
+        "extraversion": "道場では威勢がいいが、道場を出ると急に静かになる",
+        "agreeableness": "稽古相手には全力で向かうが、勝った後に必ず謝っている",
+        "sensitivity": "空振りした夜は、布団の中で剣を握る手つきを反芻している"
+      }
+    },
+    {
+      "imageKey": "r_fledgling-apothecary",
+      "name": "駆け出し薬師",
+      "rarity": "R",
+      "scores": {
+        "openness": 6,
+        "conscientiousness": 3,
+        "extraversion": 4,
+        "agreeableness": 5,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "調合の組み合わせを次々試す。九割は失敗作として棚に並ぶ",
+        "conscientiousness": "効能書きを書く前に、材料の名前をよく忘れる",
+        "extraversion": "症状を聞くのは楽しいが、診療より雑談が長くなる",
+        "agreeableness": "とりあえず治せると信じているので、誰にでも薬を渡そうとする",
+        "sensitivity": "渡した薬の効き目が気になり、翌日そっと様子を見に行く"
+      }
+    },
+    {
+      "imageKey": "r_town-bodyguard",
+      "name": "街の用心棒",
+      "rarity": "R",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 4,
+        "extraversion": 6,
+        "agreeableness": 5,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "揉め事の解決方法が、十年前から一つも増えていない",
+        "conscientiousness": "見張りの時間は守る。守った後に酒場へ直行する",
+        "extraversion": "顔の広さが最大の武器で、腕っぷしは二番目である",
+        "agreeableness": "喧嘩の仲裁は得意だが、仲裁後に両者から飯をたかる",
+        "sensitivity": "睨みつける前に、こちらが動じたことは一度もない"
+      }
+    },
+    {
+      "imageKey": "r_traveling-bard",
+      "name": "旅の吟遊詩人",
+      "rarity": "R",
+      "scores": {
+        "openness": 7,
+        "conscientiousness": 2,
+        "extraversion": 7,
+        "agreeableness": 5,
+        "sensitivity": 3
+      },
+      "flavors": {
+        "openness": "新しい街に着くたび、その日のうちに新曲を作りはじめる",
+        "conscientiousness": "約束した公演の日取りを、たびたび一日ずらして覚えている",
+        "extraversion": "聴衆が三人でも千人でも、同じ声量で語りはじめる",
+        "agreeableness": "頼まれれば歌う。頼まれなくても歌う。断る理由がない",
+        "sensitivity": "拍手が少なかった日も、次の街に着く頃には忘れている"
+      }
+    },
+    {
+      "imageKey": "r_young-archer",
+      "name": "若き弓兵",
+      "rarity": "R",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 6,
+        "extraversion": 2,
+        "agreeableness": 4,
+        "sensitivity": 5
+      },
+      "flavors": {
+        "openness": "風向きを読む工夫は重ねるが、構え方だけは変えない",
+        "conscientiousness": "毎朝同じ本数を射る。数え終わるまで朝食を取らない",
+        "extraversion": "的の前では集中しているのか、単に人と話したくないだけなのか不明",
+        "agreeableness": "仲間の的の位置まで気にして、自分の射が遅れる",
+        "sensitivity": "一射外すと、その日の残り全部の精度が落ちる"
+      }
+    },
+    {
+      "imageKey": "r_novice-priest",
+      "name": "見習い神官",
+      "rarity": "R",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 6,
+        "extraversion": 5,
+        "agreeableness": 6,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "教義の解釈を広げようとはしない。広げると説教が長くなるので",
+        "conscientiousness": "朝夕の祈りを欠かさない。祈りの後の説教も欠かさない",
+        "extraversion": "祈りより説教の方が長く、誰も止められない",
+        "agreeableness": "困っている人を放っておけず、放っておけないまま説教が始まる",
+        "sensitivity": "説教が長すぎたのではと、夜になってから急に不安になる"
+      }
+    },
+    {
+      "imageKey": "r_caravan-guard",
+      "name": "商隊の護衛",
+      "rarity": "R",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 5,
+        "extraversion": 5,
+        "agreeableness": 3,
+        "sensitivity": 3
+      },
+      "flavors": {
+        "openness": "新しい交易路の話には乗るが、危険度は先に確認する",
+        "conscientiousness": "契約した区間は必ず守る。区間外は驚くほど守らない",
+        "extraversion": "値切り交渉で鍛えた口が、護衛より役に立っている",
+        "agreeableness": "荷物より自分の身を優先しがちで、それを堂々と口にする",
+        "sensitivity": "長旅で鍛えた根性のおかげで、大抵のことは翌朝には忘れている"
+      }
+    },
+    {
+      "imageKey": "r_fledgling-thief",
+      "name": "駆け出し盗賊",
+      "rarity": "R",
+      "scores": {
+        "openness": 6,
+        "conscientiousness": 2,
+        "extraversion": 4,
+        "agreeableness": 3,
+        "sensitivity": 5
+      },
+      "flavors": {
+        "openness": "侵入経路を毎回変える。覚えていられないだけとも言われる",
+        "conscientiousness": "計画は立てるが、実行の途中で全部変わる",
+        "extraversion": "気配を消すのは得意なのに、酒場では一番よく喋る",
+        "agreeableness": "仲間の取り分を先に決めておく。自分の分は多めに書いてある",
+        "sensitivity": "逃げ切った後も、しばらく背後を振り返り続ける"
+      }
+    },
+    {
+      "imageKey": "sr_wandering-mage",
+      "name": "流浪の魔導士",
+      "rarity": "SR",
+      "scores": {
+        "openness": 7,
+        "conscientiousness": 2,
+        "extraversion": 4,
+        "agreeableness": 3,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "禁書の封を切る手にためらいがなく、その結果として書庫が半分消えた",
+        "conscientiousness": "計画は毎回立てる。守ったという記録の方が見つからない",
+        "extraversion": "人は嫌いではないが、話しかけるのは面倒だと公言している",
+        "agreeableness": "他人の都合は、たいてい実行してから思い出す",
+        "sensitivity": "書庫を吹き飛ばした翌日も、驚くほどよく眠れた"
+      }
+    },
+    {
+      "imageKey": "sr_one-eyed-hunter",
+      "name": "隻眼の狩人",
+      "rarity": "SR",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 6,
+        "extraversion": 2,
+        "agreeableness": 4,
+        "sensitivity": 3
+      },
+      "flavors": {
+        "openness": "狩り方を変える必要を感じない。当たっているので",
+        "conscientiousness": "同じ時刻に森へ入り、同じ時刻に出てくる。二十年変わらない",
+        "extraversion": "森にいる時間の方が長く、人と話すと声がかすれる",
+        "agreeableness": "同行者の歩幅に合わせるが、無言のまま合わせている",
+        "sensitivity": "片目を失っても、狩りの手順を何ひとつ変えなかった"
+      }
+    },
+    {
+      "imageKey": "sr_former-royal-guard",
+      "name": "元近衛騎士",
+      "rarity": "SR",
+      "scores": {
+        "openness": 5,
+        "conscientiousness": 6,
+        "extraversion": 4,
+        "agreeableness": 5,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "剣より詩を選ぶ程度には、常識から外れている",
+        "conscientiousness": "辞表を出す日まで、遅刻も欠勤も一度もなかった",
+        "extraversion": "人前では礼儀正しく、一人になると詩を口ずさんでいる",
+        "agreeableness": "忠誠は捨てたが、相手を立てる癖だけは抜けていない",
+        "sensitivity": "未完成の詩のことを、十年経った今も気にしている"
+      }
+    },
+    {
+      "imageKey": "sr_abyss-fortune-teller",
+      "name": "深淵の占術師",
+      "rarity": "SR",
+      "scores": {
+        "openness": 6,
+        "conscientiousness": 4,
+        "extraversion": 4,
+        "agreeableness": 3,
+        "sensitivity": 3
+      },
+      "flavors": {
+        "openness": "解釈の仕方を毎回変えており、同じ札でも読みが違う",
+        "conscientiousness": "占いの記録は几帳面につける。外れた日の分だけ紛失する",
+        "extraversion": "客の前では雄弁で、客が帰ると一言も発しない",
+        "agreeableness": "求められれば占うが、相手が望む結果は一切考慮しない",
+        "sensitivity": "外れた予言について問われても、表情ひとつ動かない"
+      }
+    },
+    {
+      "imageKey": "sr_dragon-knight-trainee",
+      "name": "竜騎士見習い",
+      "rarity": "SR",
+      "scores": {
+        "openness": 5,
+        "conscientiousness": 5,
+        "extraversion": 5,
+        "agreeableness": 6,
+        "sensitivity": 3
+      },
+      "flavors": {
+        "openness": "竜と暮らすという発想を、誰よりも先に実行した",
+        "conscientiousness": "毎朝の世話を欠かさない。作戦の手順は時々忘れる",
+        "extraversion": "初対面の相手にも、まず竜の自慢から入る",
+        "agreeableness": "竜の機嫌を優先しすぎて、作戦がたびたび崩れる",
+        "sensitivity": "竜の咆哮には怯まないが、竜に無視されると露骨に落ち込む"
+      }
+    },
+    {
+      "imageKey": "sr_star-reading-sage",
+      "name": "星読みの賢者",
+      "rarity": "SR",
+      "scores": {
+        "openness": 6,
+        "conscientiousness": 5,
+        "extraversion": 3,
+        "agreeableness": 4,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "星の解釈を毎年更新している。老眼の進行に合わせて",
+        "conscientiousness": "観測記録は六十年分そろっている。字は年々読めなくなっている",
+        "extraversion": "話しかけられれば応じるが、大半は空を見上げている",
+        "agreeableness": "助言は惜しまないが、聞き手が理解したかは確認しない",
+        "sensitivity": "星と鳥を見間違えても、結果的に当たるので気にしない"
+      }
+    },
+    {
+      "imageKey": "ssr_kingdom-knight-captain",
+      "name": "王国騎士団長",
+      "rarity": "SSR",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 6,
+        "extraversion": 7,
+        "agreeableness": 5,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "戦術は状況で変えるが、朝食のメニューは十年変えていない",
+        "conscientiousness": "作戦の詰めは完璧。ただし号令の半分は空腹の訴えである",
+        "extraversion": "その一声で兵の士気が跳ね上がる。内容が愚痴でも跳ね上がる",
+        "agreeableness": "兵の名前を全員覚えているが、覚えた理由は飯の好みを把握するためだ",
+        "sensitivity": "戦況が不利でも顔色ひとつ変えない。腹が減ると露骨に変わる"
+      }
+    },
+    {
+      "imageKey": "ssr_crimson-pirate-queen",
+      "name": "深紅の女海賊",
+      "rarity": "SSR",
+      "scores": {
+        "openness": 7,
+        "conscientiousness": 2,
+        "extraversion": 6,
+        "agreeableness": 4,
+        "sensitivity": 1
+      },
+      "flavors": {
+        "openness": "知らない海路を選び続けた結果、目的地に着いたことがほとんどない",
+        "conscientiousness": "航海計画は立てる。三日目にはどこかへ消えている",
+        "extraversion": "嵐の海でも笑っており、船員はそれで安心してしまう",
+        "agreeableness": "船員の意見は聞く。聞いた上で自分の舵を切る",
+        "sensitivity": "遭難しかけても「冒険とは寄り道である」の一言で片づける"
+      }
+    },
+    {
+      "imageKey": "ssr_reclusive-sword-saint",
+      "name": "隠棲の剣聖",
+      "rarity": "SSR",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 6,
+        "extraversion": 1,
+        "agreeableness": 4,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "六十年、同じ型だけを繰り返している。飽きたことがない",
+        "conscientiousness": "膝が悪くても、朝の素振りだけは一日も欠かしていない",
+        "extraversion": "山を下りた記録が、この二十年で一度もない",
+        "agreeableness": "訪ねてきた者には木刀一本で応じる。手加減という概念はない",
+        "sensitivity": "山を割った日のことも、膝を痛めた日のことも、同じ調子で語る"
+      }
+    },
+    {
+      "imageKey": "ssr_court-magitech-engineer",
+      "name": "宮廷魔導技師",
+      "rarity": "SSR",
+      "scores": {
+        "openness": 7,
+        "conscientiousness": 3,
+        "extraversion": 5,
+        "agreeableness": 4,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "理論より直感で発明するので、再現性が壊滅的に低い",
+        "conscientiousness": "設計図は描く。完成品と一致していたことはない",
+        "extraversion": "爆発のたびに人が集まってくるので、社交には困っていない",
+        "agreeableness": "工房を共有する気はあるが、隣人は全員逃げた",
+        "sensitivity": "壁が焦げても「爆発は成功の一歩手前」と笑っている"
+      }
+    },
+    {
+      "imageKey": "ssr_shadow-assassin-cult-leader",
+      "name": "影の暗殺教団長",
+      "rarity": "SSR",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 6,
+        "extraversion": 2,
+        "agreeableness": 2,
+        "sensitivity": 3
+      },
+      "flavors": {
+        "openness": "変装のバリエーションは豊富。全て不審者に見える",
+        "conscientiousness": "依頼は完遂する。記録は一切残さない",
+        "extraversion": "表舞台に出た記録が存在しない。出る意思もない",
+        "agreeableness": "他人の事情を考慮したことが、記録上一度もない",
+        "sensitivity": "職務質問を受けても「これも修行の一環」と涼しい顔をしている"
+      }
+    },
+    {
+      "imageKey": "ssr_sanctuary-priestess",
+      "name": "聖域の巫女",
+      "rarity": "SSR",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 6,
+        "extraversion": 4,
+        "agreeableness": 7,
+        "sensitivity": 6
+      },
+      "flavors": {
+        "openness": "祈りの形式を変えることを、考えたこともない",
+        "conscientiousness": "一日も欠かさず祈る。噛んだ日も数に入れている",
+        "extraversion": "人前に立つのは務めであって、望んでいるわけではない",
+        "agreeableness": "戦場の誰かのために祈っており、自分のために祈った記録がない",
+        "sensitivity": "祈りを噛むたび顔を赤くする。奇跡の方は変わらず起きている"
+      }
+    },
+    {
+      "imageKey": "ssr_frontier-mercenary-king",
+      "name": "辺境の傭兵王",
+      "rarity": "SSR",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 4,
+        "extraversion": 6,
+        "agreeableness": 5,
+        "sensitivity": 1
+      },
+      "flavors": {
+        "openness": "戦い方は柔軟だが、契約書は毎回同じように読み飛ばす",
+        "conscientiousness": "戦場では約束を守る。書類の期日は守らない",
+        "extraversion": "無名の傭兵団を大陸最強にしたのは、腕より人望である",
+        "agreeableness": "団員の取り分を先に配る。自分の分を数え忘れる",
+        "sensitivity": "報酬を安く受け取っても「勝てば安いもんだ」と笑い飛ばす"
+      }
+    },
+    {
+      "imageKey": "ssr_ruined-city-ghost-knight",
+      "name": "廃都の亡霊騎士",
+      "rarity": "SSR",
+      "scores": {
+        "openness": 1,
+        "conscientiousness": 7,
+        "extraversion": 2,
+        "agreeableness": 5,
+        "sensitivity": 5
+      },
+      "flavors": {
+        "openness": "新しい主に仕える発想が、そもそも存在しない",
+        "conscientiousness": "死してなお持ち場を離れない。理由は忘れたが離れない",
+        "extraversion": "廃都で誰かに会っても、鎧の中から低く唸るだけである",
+        "agreeableness": "迷い込んだ者には道を教える。本人が道を覚えていない",
+        "sensitivity": "主の顔を思い出せないことを、今も静かに気に病んでいる"
+      }
+    },
+    {
+      "imageKey": "ur_ancient-dragon-kin-valjik",
+      "name": "古龍の血族「ヴァルジーク」",
+      "rarity": "UR",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 6,
+        "extraversion": 2,
+        "agreeableness": 4,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "人の姿を取ることを覚えたのはつい最近で、それ以上は覚える気がない",
+        "conscientiousness": "血族としての誇りを、千年間一度も手放していない",
+        "extraversion": "咆哮ひとつで大地が割れるが、会話は従者を通すことが多い",
+        "agreeableness": "人の作法に合わせようとはしている。尻尾がそれを裏切っている",
+        "sensitivity": "「尻尾、また出ていますよ」と言われるたび、視線を逸らしている"
+      }
+    },
+    {
+      "imageKey": "ur_millennium-vampire-duke-orlok",
+      "name": "千年吸血公爵「オルロック」",
+      "rarity": "UR",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 2,
+        "extraversion": 4,
+        "agreeableness": 4,
+        "sensitivity": 5
+      },
+      "flavors": {
+        "openness": "千年生きても退屈が克服できず、新しい趣味を探し続けている",
+        "conscientiousness": "税の申告書を千年分溜め込んでいる。今も増え続けている",
+        "extraversion": "夜会は開く。開いた後で、なぜ開いたのか自問している",
+        "agreeableness": "部下の催促には応じる素振りを見せる。応じたことはない",
+        "sensitivity": "帳簿を出せと言われるたび、威厳を保つのに必死になっている"
+      }
+    },
+    {
+      "imageKey": "ur_ruined-temple-guardian-golem-granite",
+      "name": "廃神殿の守護巨像「グラナイト」",
+      "rarity": "UR",
+      "scores": {
+        "openness": 1,
+        "conscientiousness": 7,
+        "extraversion": 1,
+        "agreeableness": 5,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "千年、同じ場所に立っている。動く理由を思いつかない",
+        "conscientiousness": "役目は役目、とだけ繰り返して千年が経った",
+        "extraversion": "誰も訪れない神殿を守り続け、会話の記録が一件もない",
+        "agreeableness": "迷い込んだ野良猫のために、一度だけ持ち場を離れかけた",
+        "sensitivity": "千年待たされても、待っている自覚すらない"
+      }
+    },
+    {
+      "imageKey": "ur_deep-sea-empire-general-mariana",
+      "name": "深海皇国大将軍「マリアーナ」",
+      "rarity": "UR",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 7,
+        "extraversion": 4,
+        "agreeableness": 5,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "地上の習慣に馴染む気配がない。階段を今も罠だと思っている",
+        "conscientiousness": "滅びた国の規律を、一人になった今も守り続けている",
+        "extraversion": "号令の声は健在。呼びかける相手がもういない",
+        "agreeableness": "部下は皆世を去ったが、今も部下の分まで気を配る癖が抜けない",
+        "sensitivity": "滅んだ国の話になると、槍を握る手にわずかに力が入る"
+      }
+    },
+    {
+      "imageKey": "ur_thunder-god-descendant-ignacio",
+      "name": "雷神末裔「イグナシオ」",
+      "rarity": "UR",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 4,
+        "extraversion": 5,
+        "agreeableness": 5,
+        "sensitivity": 5
+      },
+      "flavors": {
+        "openness": "新しい戦い方は試すが、湿度の話に脱線して終わる",
+        "conscientiousness": "鍛錬は続けている。天候次第で休む日もある",
+        "extraversion": "初対面の相手にも、まず今日の湿度から話しはじめる",
+        "agreeableness": "頼まれれば雷を落とす。方向は保証しない",
+        "sensitivity": "本物の雷を操るのに、毛布の静電気で毎回小さく飛び上がる"
+      }
+    },
+    {
+      "imageKey": "ur_masked-demon-marshal-balzard",
+      "name": "仮面の魔王軍元帥「バルザード」",
+      "rarity": "UR",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 6,
+        "extraversion": 5,
+        "agreeableness": 3,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "戦術は磨き続けたが、仮面を外すという選択肢だけがない",
+        "conscientiousness": "軍が滅びた後も、元帥としての務めを一日も休んでいない",
+        "extraversion": "残った数名の部下に、毎朝欠かさず訓示を述べている",
+        "agreeableness": "部下が減っても「精鋭だけ残った」と言い切り、慰留はしない",
+        "sensitivity": "仮面が顔に貼りついていることを、特に問題だと思っていない"
+      }
+    },
+    {
+      "imageKey": "lr_end-witnessing-sage-agatha",
+      "name": "終焉を見届けた賢者「アガタ」",
+      "rarity": "LR",
+      "scores": {
+        "openness": 6,
+        "conscientiousness": 2,
+        "extraversion": 3,
+        "agreeableness": 5,
+        "sensitivity": 3
+      },
+      "flavors": {
+        "openness": "幾つもの時代を渡り歩き、そのたびに新しい滅び方を見てきた",
+        "conscientiousness": "世界の終わりは寸分違わず言い当てる。鍵の置き場所は毎日忘れる",
+        "extraversion": "問われれば答えるが、自分から未来を語ることはない",
+        "agreeableness": "災厄を予見しても、避けるかどうかは相手に委ねている",
+        "sensitivity": "「未来は視えても、昨日置いた場所は視えない」と真顔でぼやく"
+      }
+    },
+    {
+      "imageKey": "lr_world-tree-guardian-yggdra",
+      "name": "世界樹の番人「ユグドラ」",
+      "rarity": "LR",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 5,
+        "extraversion": 2,
+        "agreeableness": 4,
+        "sensitivity": 5
+      },
+      "flavors": {
+        "openness": "二千年、根を張ったまま動いていない。動く必要を感じていない",
+        "conscientiousness": "木々の芽吹きと枯死を、季節ごと欠かさず巡らせている",
+        "extraversion": "旅人が根元で眠っていても、たいていは黙って見ている",
+        "agreeableness": "根元で眠る旅人を、追い払ったことは一度もない",
+        "sensitivity": "挨拶なしに立ち去られた日は、紅葉の色づきが妙にまだらになる"
+      }
+    },
+    {
+      "imageKey": "lr_blazing-dancer-ignis",
+      "name": "業火の舞姫「イグニス」",
+      "rarity": "LR",
+      "scores": {
+        "openness": 5,
+        "conscientiousness": 3,
+        "extraversion": 6,
+        "agreeableness": 4,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "舞の型を毎回変える。同じものを二度見た者がいない",
+        "conscientiousness": "舞の稽古は気の向いた日にだけ行う。それで足りている",
+        "extraversion": "見る者すべてが言葉を失う舞を、誰に頼まれずとも披露する",
+        "agreeableness": "共演は歓迎する。ただし相手の衣装まで燃やしかねない",
+        "sensitivity": "舞の最中に何が起きても、足運びが乱れたことがない"
+      }
+    },
+    {
+      "imageKey": "lr_storm-sovereign-tempest",
+      "name": "暴風を統べる者「テンペスト」",
+      "rarity": "LR",
+      "scores": {
+        "openness": 4,
+        "conscientiousness": 5,
+        "extraversion": 4,
+        "agreeableness": 6,
+        "sensitivity": 3
+      },
+      "flavors": {
+        "openness": "風の使い方を工夫し続けているが、天気そのものは変えられない",
+        "conscientiousness": "味方の旗ひとつ乱さない精緻な制御を、毎回崩さずやってのける",
+        "extraversion": "嵐の中では堂々としており、晴天の日はやや所在なさげである",
+        "agreeableness": "敵だけを切り裂き、味方には風ひとつ当てない配慮を徹底している",
+        "sensitivity": "遠征のたび本降りに遭う雨男ぶりを、苦笑いで受け入れている"
+      }
+    },
+    {
+      "imageKey": "lr_underworld-gatekeeper-cerberus",
+      "name": "冥府の門番「ケルベロス卿」",
+      "rarity": "LR",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 7,
+        "extraversion": 5,
+        "agreeableness": 3,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "門を守る以外の役目を、三つの顔そろって考えたことがない",
+        "conscientiousness": "千年、門を破られたことが一度もない。休んだ記録もない",
+        "extraversion": "三つの顔が常に言い争っており、門前は驚くほど騒がしい",
+        "agreeableness": "多数決で二対一が出ても、負けた一つが延々と食い下がる",
+        "sensitivity": "議論に負けた顔が、そのあと三日ほど不機嫌なままでいる"
+      }
+    },
+    {
+      "imageKey": "ar_sky-thunder-emperor-odinheim",
+      "name": "天空を統べし雷帝「オーディンハイム」",
+      "rarity": "AR",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 6,
+        "extraversion": 5,
+        "agreeableness": 3,
+        "sensitivity": 5
+      },
+      "flavors": {
+        "openness": "玉座の高さを変える案が出るたび、議題ごと却下している",
+        "conscientiousness": "玉座に座る時刻を、この十年一度も違えていない",
+        "extraversion": "一睨みで戦場の空気が凍る。睨む相手には事欠かない",
+        "agreeableness": "側近の報告は聞く。自分で確かめようとはしない",
+        "sensitivity": "玉座が浮いている十年間、一度も下を見ていない"
+      }
+    },
+    {
+      "imageKey": "ar_abyss-returned-void-lord-abyss",
+      "name": "深淵より帰りし虚無卿「アビス」",
+      "rarity": "AR",
+      "scores": {
+        "openness": 7,
+        "conscientiousness": 2,
+        "extraversion": 2,
+        "agreeableness": 3,
+        "sensitivity": 3
+      },
+      "flavors": {
+        "openness": "世界の裂け目に自ら飛び込んだ。戻る算段は立てていなかった",
+        "conscientiousness": "帰還してから半年、自分の城の玄関を見つけられずにいた",
+        "extraversion": "城で半年迷っている間、誰にも助けを求めなかった",
+        "agreeableness": "斬った相手は存在ごと消えるので、和解の余地が残らない",
+        "sensitivity": "迷い続けても「虚無に道しるべなどない」と豪語している"
+      }
+    },
+    {
+      "imageKey": "ar_thousand-fates-weaver-parca",
+      "name": "千の運命を紡ぐ織姫「パルカ」",
+      "rarity": "AR",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 6,
+        "extraversion": 1,
+        "agreeableness": 5,
+        "sensitivity": 4
+      },
+      "flavors": {
+        "openness": "糸の色は無数に扱うが、仕事場から出たことは一度もない",
+        "conscientiousness": "他人の運命は寸分の狂いなく織り上げる。自分の裾はほどけたままだ",
+        "extraversion": "織り機の前に座り続け、話しかけられても手を止めない",
+        "agreeableness": "誰の運命も等しく紡ぐ。頼まれた順に例外なく",
+        "sensitivity": "自分の裾を縫えないことを、千年来の悩みとして抱え続けている"
+      }
+    },
+    {
+      "imageKey": "ar_immortal-oni-general-rasetsumaru",
+      "name": "不滅の鬼将軍「羅刹丸」",
+      "rarity": "AR",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 5,
+        "extraversion": 6,
+        "agreeableness": 3,
+        "sensitivity": 1
+      },
+      "flavors": {
+        "openness": "戦い方を変える必要がない。死んでも戻ってくるので",
+        "conscientiousness": "戦場には必ず立つ。どちらの陣営かは毎回確認している",
+        "extraversion": "討たれるたび部下に話しかけ、状況を一から聞き直す",
+        "agreeableness": "敵味方の区別が曖昧なまま、目の前の相手に斬りかかる",
+        "sensitivity": "幾百回討たれても、蘇った直後の表情が毎回同じである"
+      }
+    },
+    {
+      "imageKey": "gr_creation-god-proxy-demiurge",
+      "name": "万象を統べし創造神代行「デミウルゴス」",
+      "rarity": "GR",
+      "scores": {
+        "openness": 6,
+        "conscientiousness": 5,
+        "extraversion": 2,
+        "agreeableness": 5,
+        "sensitivity": 7
+      },
+      "flavors": {
+        "openness": "世界の設計案は無数に持っている。採用に至ったものは少ない",
+        "conscientiousness": "一本の線を引くのに千年かける。引いた後の管理は完璧である",
+        "extraversion": "設計図の前で腕を組んだまま、誰とも口をきかない日が続く",
+        "agreeableness": "山の形も海の深さも、誰かの都合を考えてから決めている",
+        "sensitivity": "一度描いた線は消しても跡が残る、と言って手が止まる"
+      }
+    },
+    {
+      "imageKey": "gr_life-death-queen-morgana",
+      "name": "生と死を統べる両界の女王「モルガナ」",
+      "rarity": "GR",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 4,
+        "extraversion": 3,
+        "agreeableness": 4,
+        "sensitivity": 2
+      },
+      "flavors": {
+        "openness": "数百年ぶりの決断でも、やり方は初回から変えていない",
+        "conscientiousness": "両界の玉座に等しく座る。座面の硬さも等しく記録している",
+        "extraversion": "玉座に一人でいる時間が長く、話し相手は自分の記録帳である",
+        "agreeableness": "生者と死者を平等に扱う。どちらにも肩入れした記録がない",
+        "sensitivity": "生死を入れ替える権を振るう瞬間も、手が震えたことがない"
+      }
+    },
+    {
+      "imageKey": "gr_history-keeper-archive",
+      "name": "森羅万象を記す歴史の番人「アーカイブ」",
+      "rarity": "GR",
+      "scores": {
+        "openness": 2,
+        "conscientiousness": 6,
+        "extraversion": 1,
+        "agreeableness": 4,
+        "sensitivity": 6
+      },
+      "flavors": {
+        "openness": "記録の方式を変えれば追いつくと言われても、変える気がない",
+        "conscientiousness": "起きた出来事を一つ残らず書き記す。三百年分溜まっている",
+        "extraversion": "無限の書庫に一人でおり、来訪者の記録が数件しかない",
+        "agreeableness": "誰の出来事も分け隔てなく記す。英雄も野良猫も同じ扱いである",
+        "sensitivity": "歴史に空白があってはならないと焦り、羽根ペンを持ったまま息をつく"
+      }
+    },
+    {
+      "imageKey": "tr_spacetime-transcendent-chronosphere",
+      "name": "時空を紡ぐ超越者「クロノスフィア」",
+      "rarity": "TR",
+      "scores": {
+        "openness": 7,
+        "conscientiousness": 2,
+        "extraversion": 5,
+        "agreeableness": 5,
+        "sensitivity": 1
+      },
+      "flavors": {
+        "openness": "あらゆる時代を等しく面白がっており、どこにも定住しない",
+        "conscientiousness": "予定を立てる意味がない。立てた時点の「いま」が定まらないため",
+        "extraversion": "千年前の朝食と千年後の天気を、同じ相手に続けて語りかける",
+        "agreeableness": "相手がどの時代の者でも、分け隔てなく話しかける",
+        "sensitivity": "自分がいつにいるか見失っても、「時間に迷うのも悪くない」で済ませる"
+      }
+    },
+    {
+      "imageKey": "tr_being-nonbeing-sovereign-nullgaia",
+      "name": "存在と非存在を統べる者「ヌルガイア」",
+      "rarity": "TR",
+      "scores": {
+        "openness": 3,
+        "conscientiousness": 4,
+        "extraversion": 2,
+        "agreeableness": 3,
+        "sensitivity": 6
+      },
+      "flavors": {
+        "openness": "斬り方は一種類しかない。それ以上を必要としていない",
+        "conscientiousness": "斬ると決めた相手は必ず斬る。それ以外の予定は特に立てない",
+        "extraversion": "自分自身への確認を毎朝繰り返す一方、他人とは滅多に口をきかない",
+        "agreeableness": "斬った相手は記録ごと消えるため、関係というものが成立しない",
+        "sensitivity": "鏡を見て自分がまだ存在していると確かめるまで、落ち着かない"
+      }
+    },
+    {
+      "imageKey": "or_primordial-god-ars",
+      "name": "全てを内包する根源神「アルス」",
+      "rarity": "OR",
+      "scores": {
+        "openness": 5,
+        "conscientiousness": 4,
+        "extraversion": 1,
+        "agreeableness": 6,
+        "sensitivity": 7
+      },
+      "flavors": {
+        "openness": "星も大地も命も生み出したが、作風は最初から変わっていない",
+        "conscientiousness": "空の色を思い立って変えることがある。記録には残していない",
+        "extraversion": "世界のすべてを生み出しておきながら、話し相手が一人もいない",
+        "agreeableness": "世界の隅々にまで気を配り、誰にも頼まれていないのに手を入れ続ける",
+        "sensitivity": "「これで本当に良かったのか」を、世界が始まってから考え続けている"
+      }
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "meta": {
+    "title": "異世界転生後の職業診断 回答画面キャラ台本",
+    "note": "各設問を、その因子と相性の良いキャラが問いかける形式のセリフ。キャラの口調はfactor_comments_53の一人称・語尾に準拠。決めつけ・自己言及表現は含めず、質問一文のみで構成。",
+    "totalItems": 29,
+    "background": "共通1枚の固定背景を使用(キャラ絵のみ差し替え)。背景イラスト方針は別途検討。",
+    "progressBar": "画面上部の細い帯に29アイテムの横長リビール画像を配置(既存仕様を踏襲)"
+  },
+  "items": [
+    {
+      "no": 1,
+      "factor": "extraversion",
+      "reversed": false,
+      "questionText": "初対面の人が多い場でも、自分から話しかけにいく方だ",
+      "speaker": {
+        "imageKey": "n_gossip-monger",
+        "name": "井戸端の噂好き",
+        "rarity": "N"
+      },
+      "dialogueLine": "あんた、初めて会う人ばっかりの場でも自分から声かけにいく方かい？"
+    },
+    {
+      "no": 2,
+      "factor": "conscientiousness",
+      "reversed": false,
+      "questionText": "やると決めたことは、最後までやり切る",
+      "speaker": {
+        "imageKey": "n_farmer",
+        "name": "畑仕事の農民",
+        "rarity": "N"
+      },
+      "dialogueLine": "やると決めたことは、最後までやり切る方か？"
+    },
+    {
+      "no": 3,
+      "factor": "openness",
+      "reversed": false,
+      "questionText": "知らない道を見つけると、つい入ってみたくなる",
+      "speaker": {
+        "imageKey": "n_lost-traveler",
+        "name": "迷子の旅人",
+        "rarity": "N"
+      },
+      "dialogueLine": "知らない道を見つけると、つい入ってみたくなる方か？"
+    },
+    {
+      "no": 4,
+      "factor": "agreeableness",
+      "reversed": false,
+      "questionText": "困っている人がいると、放っておけない",
+      "speaker": {
+        "imageKey": "n_inn-servant",
+        "name": "宿屋の下働き",
+        "rarity": "N"
+      },
+      "dialogueLine": "困っている人がいると、放っておけない方ですか？"
+    },
+    {
+      "no": 5,
+      "factor": "sensitivity",
+      "reversed": false,
+      "questionText": "些細なことでも、あとから思い出して気になってしまう",
+      "speaker": {
+        "imageKey": "n_village-watchman",
+        "name": "村の見張り番",
+        "rarity": "N"
+      },
+      "dialogueLine": "些細なことでも、あとから思い出して気になっちまう方か？"
+    },
+    {
+      "no": 6,
+      "factor": "extraversion",
+      "reversed": false,
+      "questionText": "誰かと話していると、だんだん元気になってくる",
+      "speaker": {
+        "imageKey": "r_traveling-bard",
+        "name": "旅の吟遊詩人",
+        "rarity": "R"
+      },
+      "dialogueLine": "誰かと話していると、だんだん元気になってくる方かい？"
+    },
+    {
+      "no": 7,
+      "factor": "conscientiousness",
+      "reversed": false,
+      "questionText": "締め切りより早めに終わらせておきたい",
+      "speaker": {
+        "imageKey": "n_cart-driver",
+        "name": "荷馬車の御者",
+        "rarity": "N"
+      },
+      "dialogueLine": "締め切りより早めに終わらせておきたい方か？"
+    },
+    {
+      "no": 8,
+      "factor": "openness",
+      "reversed": false,
+      "questionText": "誰も試していないやり方を、まず考えてみたくなる",
+      "speaker": {
+        "imageKey": "sr_wandering-mage",
+        "name": "流浪の魔導士",
+        "rarity": "SR"
+      },
+      "dialogueLine": "誰も試していないやり方を、まず考えてみたくなる方だろうか？"
+    },
+    {
+      "no": 9,
+      "factor": "agreeableness",
+      "reversed": false,
+      "questionText": "相手の言い分を、まず最後まで聞こうとする",
+      "speaker": {
+        "imageKey": "ssr_sanctuary-priestess",
+        "name": "聖域の巫女",
+        "rarity": "SSR"
+      },
+      "dialogueLine": "相手の言い分を、まず最後まで聞こうとする方ですか？"
+    },
+    {
+      "no": 10,
+      "factor": "sensitivity",
+      "reversed": false,
+      "questionText": "予定が急に変わると、落ち着かなくなる",
+      "speaker": {
+        "imageKey": "n_baker-third-son",
+        "name": "パン屋の三男坊",
+        "rarity": "N"
+      },
+      "dialogueLine": "予定が急に変わると、落ち着かなくなる方ですか？"
+    },
+    {
+      "no": 11,
+      "factor": "extraversion",
+      "reversed": true,
+      "questionText": "一人で過ごす時間の方が、正直ラクだ",
+      "speaker": {
+        "imageKey": "ssr_kingdom-knight-captain",
+        "name": "王国騎士団長",
+        "rarity": "SSR"
+      },
+      "dialogueLine": "一人で過ごす時間の方が、正直ラクだと思うことはあるか？"
+    },
+    {
+      "no": 12,
+      "factor": "conscientiousness",
+      "reversed": false,
+      "questionText": "使ったものは、元の場所に戻さないと気が済まない",
+      "speaker": {
+        "imageKey": "n_herb-picker-girl",
+        "name": "薬草摘みの少女",
+        "rarity": "N"
+      },
+      "dialogueLine": "使ったものは、元の場所に戻さないと気が済まない方？"
+    },
+    {
+      "no": 13,
+      "factor": "openness",
+      "reversed": true,
+      "questionText": "慣れたやり方を変える必要を、あまり感じない",
+      "speaker": {
+        "imageKey": "ssr_court-magitech-engineer",
+        "name": "宮廷魔導技師",
+        "rarity": "SSR"
+      },
+      "dialogueLine": "慣れたやり方を変える必要を、あまり感じない方？"
+    },
+    {
+      "no": 14,
+      "factor": "agreeableness",
+      "reversed": true,
+      "questionText": "自分の意見を通すことを、優先しがちだ",
+      "speaker": {
+        "imageKey": "r_novice-priest",
+        "name": "見習い神官",
+        "rarity": "R"
+      },
+      "dialogueLine": "自分の意見を通すことを、優先しがちな方ですか？"
+    },
+    {
+      "no": 15,
+      "factor": "sensitivity",
+      "reversed": true,
+      "questionText": "たいていのことは、あまり気にせずにいられる",
+      "speaker": {
+        "imageKey": "n_apprentice-blacksmith",
+        "name": "見習い鍛冶屋",
+        "rarity": "N"
+      },
+      "dialogueLine": "たいていのことは、あまり気にせずにいられる方か？"
+    },
+    {
+      "no": 16,
+      "factor": "extraversion",
+      "reversed": false,
+      "questionText": "集まりの中では、話の中心にいることが多い",
+      "speaker": {
+        "imageKey": "r_town-bodyguard",
+        "name": "街の用心棒",
+        "rarity": "R"
+      },
+      "dialogueLine": "集まりの中では、話の中心にいることが多い方か？"
+    },
+    {
+      "no": 17,
+      "factor": "conscientiousness",
+      "reversed": false,
+      "questionText": "計画を立ててから動く方だ",
+      "speaker": {
+        "imageKey": "ssr_ruined-city-ghost-knight",
+        "name": "廃都の亡霊騎士",
+        "rarity": "SSR"
+      },
+      "dialogueLine": "計画を立ててから動く方だろうか？"
+    },
+    {
+      "no": 18,
+      "factor": "openness",
+      "reversed": false,
+      "questionText": "抽象的な話や、答えの出ない議論が好きだ",
+      "speaker": {
+        "imageKey": "ssr_crimson-pirate-queen",
+        "name": "深紅の女海賊",
+        "rarity": "SSR"
+      },
+      "dialogueLine": "抽象的な話や、答えの出ない議論が好きな方かい？"
+    },
+    {
+      "no": 19,
+      "factor": "agreeableness",
+      "reversed": false,
+      "questionText": "人に頼まれると、断るのが苦手だ",
+      "speaker": {
+        "imageKey": "sr_dragon-knight-trainee",
+        "name": "竜騎士見習い",
+        "rarity": "SR"
+      },
+      "dialogueLine": "人に頼まれると、断るのが苦手な方か？"
+    },
+    {
+      "no": 20,
+      "factor": "sensitivity",
+      "reversed": false,
+      "questionText": "自分の言ったことを、後で何度も思い返すことがある",
+      "speaker": {
+        "imageKey": "r_caravan-guard",
+        "name": "商隊の護衛",
+        "rarity": "R"
+      },
+      "dialogueLine": "自分の言ったことを、後で何度も思い返すことがあるか？"
+    },
+    {
+      "no": 21,
+      "factor": "extraversion",
+      "reversed": true,
+      "questionText": "大人数の場は、少し疲れる",
+      "speaker": {
+        "imageKey": "ssr_frontier-mercenary-king",
+        "name": "辺境の傭兵王",
+        "rarity": "SSR"
+      },
+      "dialogueLine": "大人数の場は、少し疲れる方か？"
+    },
+    {
+      "no": 22,
+      "factor": "conscientiousness",
+      "reversed": true,
+      "questionText": "気が向いたときに、まとめてやることが多い",
+      "speaker": {
+        "imageKey": "r_young-archer",
+        "name": "若き弓兵",
+        "rarity": "R"
+      },
+      "dialogueLine": "気が向いたときに、まとめてやることが多い方だろうか？"
+    },
+    {
+      "no": 23,
+      "factor": "openness",
+      "reversed": false,
+      "questionText": "芸術や物語に、強く心を動かされることがある",
+      "speaker": {
+        "imageKey": "r_fledgling-thief",
+        "name": "駆け出し盗賊",
+        "rarity": "R"
+      },
+      "dialogueLine": "芸術や物語に、強く心を動かされることがある方？"
+    },
+    {
+      "no": 24,
+      "factor": "agreeableness",
+      "reversed": false,
+      "questionText": "誰かと衝突するくらいなら、こちらが引く",
+      "speaker": {
+        "imageKey": "n_shepherd-boy",
+        "name": "羊追いの少年",
+        "rarity": "N"
+      },
+      "dialogueLine": "誰かと衝突するくらいなら、こちらが引く方？"
+    },
+    {
+      "no": 25,
+      "factor": "sensitivity",
+      "reversed": true,
+      "questionText": "緊張する場面でも、いつも通りでいられる",
+      "speaker": {
+        "imageKey": "sr_abyss-fortune-teller",
+        "name": "深淵の占術師",
+        "rarity": "SR"
+      },
+      "dialogueLine": "緊張する場面でも、いつも通りでいられる方だろうか？"
+    },
+    {
+      "no": 26,
+      "factor": "conscientiousness",
+      "reversed": false,
+      "questionText": "細かい部分まで確認しないと不安になる",
+      "speaker": {
+        "imageKey": "r_novice-swordsman",
+        "name": "見習い剣士",
+        "rarity": "R"
+      },
+      "dialogueLine": "細かい部分まで確認しないと不安になる方ですか？"
+    },
+    {
+      "no": 27,
+      "factor": "openness",
+      "reversed": false,
+      "questionText": "想像の中で、あれこれ考えを巡らせている時間が長い",
+      "speaker": {
+        "imageKey": "r_fledgling-apothecary",
+        "name": "駆け出し薬師",
+        "rarity": "R"
+      },
+      "dialogueLine": "想像の中で、あれこれ考えを巡らせている時間が長い方？"
+    },
+    {
+      "no": 28,
+      "factor": "agreeableness",
+      "reversed": true,
+      "questionText": "他人の失敗には、わりと厳しい方だ",
+      "speaker": {
+        "imageKey": "sr_star-reading-sage",
+        "name": "星読みの賢者",
+        "rarity": "SR"
+      },
+      "dialogueLine": "他人の失敗には、わりと厳しい方かの？"
+    },
+    {
+      "no": 29,
+      "factor": "conscientiousness",
+      "reversed": true,
+      "questionText": "面倒なことは、つい後回しにしてしまう",
+      "speaker": {
+        "imageKey": "sr_former-royal-guard",
+        "name": "元近衛騎士",
+        "rarity": "SR"
+      },
+      "dialogueLine": "面倒なことは、つい後回しにしてしまう方ですか？"
+    }
+  ]
+}

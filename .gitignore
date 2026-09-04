@@ -1,0 +1,5 @@
+.DS_Store
+Thumbs.db
+
+# 元PNG(高解像度・未圧縮)。サイトはimages/characters等のwebp版を参照するため公開リポジトリには含めない
+images/_src/

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>異世界転生後の職業診断</title>
+<meta name="description" content="29の質問に答えて、あなたが異世界に転生したらどんな職業になるかを診断します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ==================== イントロ画面 ==================== -->
+  <section id="screen-intro">
+    <div class="intro-eyebrow">ISEKAI CAREER DIAGNOSIS</div>
+    <h1 class="intro-title">異世界転生後の<br>職業診断</h1>
+    <div class="intro-frame"><img src="images/bg-guild.webp" alt=""></div>
+    <p class="intro-lead">
+      29個の質問に答えると、あなたの性格から<br>
+      「異世界に転生したらどんな職業になるか」を診断します。<br>
+      診断結果は、異世界転生ガチャに登場するキャラクターの中から選ばれます。
+    </p>
+    <div class="intro-meta">
+      <div><b>29問</b>質問数</div>
+      <div><b>約3分</b>所要時間</div>
+      <div><b>55通り</b>診断結果</div>
+    </div>
+    <button id="btnStart" class="gold-btn" style="width:100%;">診断をはじめる</button>
+    <p class="intro-note">
+      本診断は心理学のBig Five理論の構成を参考にした独自の簡易診断であり、学術的な性格検査ではありません。<br>
+      結果はエンタメ目的でお楽しみください。
+    </p>
+  </section>
+
+  <!-- ==================== 診断回答画面 ==================== -->
+  <section id="screen-quiz" hidden>
+    <div class="mural-bar">
+      <img src="images/mural.webp" alt="">
+      <div class="mural-reveal"><img src="images/mural.webp" alt=""></div>
+      <div class="mural-count"><span id="quizProgressNum">0</span> / <span id="quizProgressTotal">29</span></div>
+    </div>
+
+    <div class="stage">
+      <img class="stage-bg" src="images/bg-guild.webp" alt="">
+      <button id="stageBack" class="stage-back" disabled aria-label="前の設問に戻る">←</button>
+      <div class="stage-qno">Q<span id="quizNo">1</span></div>
+      <div class="stage-char-box" id="stageCharBox"></div>
+    </div>
+
+    <div class="dialogue-box">
+      <span class="dialogue-name" id="dialogueName">―</span>
+      <p class="dialogue-text" id="dialogueText"></p>
+    </div>
+
+    <div class="answer-area">
+      <div class="slider-wrap">
+        <div class="slider-labels"><span>あてはまらない</span><span>あてはまる</span></div>
+        <div class="slider-dots" id="sliderDots">
+          <div class="slider-track"></div>
+          <div class="slider-fill" id="sliderFill"></div>
+        </div>
+      </div>
+    </div>
+    <div class="special-row">
+      <button id="btnDontKnow" class="ghost-btn">わからない</button>
+      <button id="btnSkip" class="ghost-btn">スキップ</button>
+    </div>
+  </section>
+
+  <!-- ==================== 結果画面 ==================== -->
+  <section id="screen-result" hidden>
+    <div class="result-shared-banner" id="resultSharedBanner" hidden>
+      これは共有された診断結果です <button id="btnTryMyself" class="ghost-btn">自分も診断する</button>
+    </div>
+
+    <div class="brand">異世界転生後の職業診断</div>
+
+    <div class="intro">
+      <div class="lead">あなたの転生キャラは</div>
+      <div class="charname" id="resultCharName"></div>
+    </div>
+
+    <div class="char-portrait">
+      <img id="resultPortraitImg" src="" alt="">
+    </div>
+
+    <div class="rank-note" id="rankNote">ランクは特性の強さを表すものであり、優劣ではありません。</div>
+
+    <div class="char-factors" id="charFactorsBlock"></div>
+
+    <div class="story">
+      <h2>キャラクターストーリー</h2>
+      <p id="resultStory"></p>
+    </div>
+
+    <div class="yours" id="yoursBlock">
+      <div class="lead">あなたの結果</div>
+      <div id="yoursFactorBlocks"></div>
+    </div>
+
+    <div class="catchphrase">
+      <div class="lead">あなたの性格を一言で表すと</div>
+      <div class="phrase" id="resultCatchphrase">―</div>
+    </div>
+
+    <div class="cta">
+      <button id="btnShare" class="btn btn-share">結果をシェアする</button>
+      <a id="gachaCta" class="btn btn-gacha" href="#" target="_blank" rel="noopener">
+        <b>異世界には他にもいろいろなキャラがいます</b>
+        <span>ガチャで運試ししてみませんか？</span>
+      </a>
+      <div class="cta-note">シェアすると結果のURLも一緒に共有されます</div>
+    </div>
+
+    <div class="cta" style="margin-top:14px;">
+      <button id="btnRetry" class="btn btn-share">もう一度診断する</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="js/engine.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/result.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

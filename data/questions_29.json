@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "title": "異世界転生後の職業診断 設問データ",
+    "totalItems": 29,
+    "scale": {
+      "min": 1,
+      "max": 7,
+      "midpoint": 4,
+      "labels": {
+        "1": "まったくあてはまらない",
+        "2": "あてはまらない",
+        "3": "ややあてはまらない",
+        "4": "どちらともいえない",
+        "5": "ややあてはまる",
+        "6": "あてはまる",
+        "7": "とてもあてはまる"
+      }
+    },
+    "specialAnswers": ["skip", "dontKnow"],
+    "itemCountByFactor": {
+      "extraversion": 5,
+      "sensitivity": 5,
+      "openness": 6,
+      "agreeableness": 6,
+      "conscientiousness": 7
+    },
+    "reference": "項目数配分と7段階評価は並川ら(2012)「Big Five尺度短縮版の開発と信頼性と妥当性の検討」の構成を参照。設問文は本プロジェクトの独自書き下ろしであり、原尺度の項目を転載していない。",
+    "specialTriggers": {
+      "skipRateThreshold": 0.5,
+      "dontKnowRateThreshold": 0.5,
+      "priority": "skip",
+      "note": "両方が閾値を超えた場合はskip側を優先する"
+    }
+  },
+  "items": [
+    { "no": 1,  "factor": "extraversion",      "reversed": false, "text": "初対面の人が多い場でも、自分から話しかけにいく方だ" },
+    { "no": 2,  "factor": "conscientiousness", "reversed": false, "text": "やると決めたことは、最後までやり切る" },
+    { "no": 3,  "factor": "openness",          "reversed": false, "text": "知らない道を見つけると、つい入ってみたくなる" },
+    { "no": 4,  "factor": "agreeableness",     "reversed": false, "text": "困っている人がいると、放っておけない" },
+    { "no": 5,  "factor": "sensitivity",       "reversed": false, "text": "些細なことでも、あとから思い出して気になってしまう" },
+
+    { "no": 6,  "factor": "extraversion",      "reversed": false, "text": "誰かと話していると、だんだん元気になってくる" },
+    { "no": 7,  "factor": "conscientiousness", "reversed": false, "text": "締め切りより早めに終わらせておきたい" },
+    { "no": 8,  "factor": "openness",          "reversed": false, "text": "誰も試していないやり方を、まず考えてみたくなる" },
+    { "no": 9,  "factor": "agreeableness",     "reversed": false, "text": "相手の言い分を、まず最後まで聞こうとする" },
+    { "no": 10, "factor": "sensitivity",       "reversed": false, "text": "予定が急に変わると、落ち着かなくなる" },
+
+    { "no": 11, "factor": "extraversion",      "reversed": true,  "text": "一人で過ごす時間の方が、正直ラクだ" },
+    { "no": 12, "factor": "conscientiousness", "reversed": false, "text": "使ったものは、元の場所に戻さないと気が済まない" },
+    { "no": 13, "factor": "openness",          "reversed": true,  "text": "慣れたやり方を変える必要を、あまり感じない" },
+    { "no": 14, "factor": "agreeableness",     "reversed": true,  "text": "自分の意見を通すことを、優先しがちだ" },
+    { "no": 15, "factor": "sensitivity",       "reversed": true,  "text": "たいていのことは、あまり気にせずにいられる" },
+
+    { "no": 16, "factor": "extraversion",      "reversed": false, "text": "集まりの中では、話の中心にいることが多い" },
+    { "no": 17, "factor": "conscientiousness", "reversed": false, "text": "計画を立ててから動く方だ" },
+    { "no": 18, "factor": "openness",          "reversed": false, "text": "抽象的な話や、答えの出ない議論が好きだ" },
+    { "no": 19, "factor": "agreeableness",     "reversed": false, "text": "人に頼まれると、断るのが苦手だ" },
+    { "no": 20, "factor": "sensitivity",       "reversed": false, "text": "自分の言ったことを、後で何度も思い返すことがある" },
+
+    { "no": 21, "factor": "extraversion",      "reversed": true,  "text": "大人数の場は、少し疲れる" },
+    { "no": 22, "factor": "conscientiousness", "reversed": true,  "text": "気が向いたときに、まとめてやることが多い" },
+    { "no": 23, "factor": "openness",          "reversed": false, "text": "芸術や物語に、強く心を動かされることがある" },
+    { "no": 24, "factor": "agreeableness",     "reversed": false, "text": "誰かと衝突するくらいなら、こちらが引く" },
+    { "no": 25, "factor": "sensitivity",       "reversed": true,  "text": "緊張する場面でも、いつも通りでいられる" },
+
+    { "no": 26, "factor": "conscientiousness", "reversed": false, "text": "細かい部分まで確認しないと不安になる" },
+    { "no": 27, "factor": "openness",          "reversed": false, "text": "想像の中で、あれこれ考えを巡らせている時間が長い" },
+    { "no": 28, "factor": "agreeableness",     "reversed": true,  "text": "他人の失敗には、わりと厳しい方だ" },
+    { "no": 29, "factor": "conscientiousness", "reversed": true,  "text": "面倒なことは、つい後回しにしてしまう" }
+  ]
+}
