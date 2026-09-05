@@ -292,6 +292,22 @@ a { color: inherit; }
 #screen-result .btn-gacha span { font-size: 12px; font-weight: 500; opacity: 0.82; }
 #screen-result .cta-note { text-align: center; font-size: 11px; color: var(--r-text-dim); margin-top: 4px; line-height: 1.6; }
 
+/* ==================== 結果表示前の広告オーバーレイ ==================== */
+.ad-overlay {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(10, 7, 20, 0.92);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.ad-overlay-inner { width: 100%; max-width: 340px; text-align: center; }
+.ad-overlay-label {
+  font-family: var(--font-display); font-weight: 400; font-size: 15px; color: var(--text);
+  margin-bottom: 18px; letter-spacing: 0.02em;
+}
+.ad-progress-track { height: 8px; border-radius: 999px; background: var(--border-soft); overflow: hidden; }
+.ad-progress-fill { height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--violet-2), var(--gold)); }
+.ad-overlay-note { margin-top: 14px; font-size: 12px; color: var(--text-dim); }
+
 @media (max-width: 380px) {
   .stage-char-box { width: 66%; }
   .intro-title { font-size: 22px; }

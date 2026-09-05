@@ -131,12 +131,23 @@
     </div>
   </section>
 
+  <!-- ==================== 結果表示前の広告オーバーレイ ==================== -->
+  <div id="adOverlay" class="ad-overlay" hidden>
+    <div class="ad-overlay-inner">
+      <div class="ad-overlay-label">結果を準備しています…</div>
+      <div class="ad-progress-track"><div class="ad-progress-fill" id="adProgressFill"></div></div>
+      <div class="ad-overlay-note">広告のご協力で無料でご利用いただけます（あと<span id="adSeconds">4</span>秒）</div>
+    </div>
+  </div>
+
 </div>
 
 <script src="js/engine.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/result.js"></script>
 <script src="js/share-card.js"></script>
+<script src="js/ad-config.js"></script>
+<script src="js/ads.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

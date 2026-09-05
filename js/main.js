@@ -25,10 +25,13 @@ function startQuiz() {
   });
 }
 
-function handleQuizDone(answersMap) {
+async function handleQuizDone(answersMap) {
   const { scores, skipRate, dontKnowRate } = scoreAnswers(answersMap, DATA.questions);
   const specialKey = resolveSpecial(skipRate, dontKnowRate);
   history.replaceState(null, '', `${location.pathname}?${encodeResult(scores, specialKey)}`);
+
+  await playResultAd();
+
   const rendered = Result.render(DATA, { scores, specialKey, isShared: false });
   currentResultState = { scores, specialKey, ...rendered };
   showScreen('screen-result');
