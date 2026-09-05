@@ -63,22 +63,55 @@ const ShareCard = (() => {
     ctx.fill();
   }
 
-  // 因子ランクを1行(開放A 誠実S 外向B ...)で描画し、末尾のx座標を返す
-  function drawFactorRow(ctx, x, y, scores, rankTable) {
-    let cx = x;
-    for (const f of FACTORS) {
-      const rank = rankFor(scores[f], rankTable);
-      ctx.font = '20px "Zen Kaku Gothic New"';
-      ctx.fillStyle = '#9691B8';
-      ctx.fillText(FACTOR_LABEL[f], cx, y);
-      cx += ctx.measureText(FACTOR_LABEL[f]).width + 4;
+  function pillRect(ctx, x, y, w, h) {
+    const r = h / 2;
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
 
-      ctx.font = '700 22px "Zen Kaku Gothic New"';
+  // 5因子を棒グラフで描画（結果ページの.factor-rowと同じ構成: ラベル+バー+ランク）。
+  // 余白を埋める主要要素なので、1行サマリーより縦にしっかり場所を使う
+  function drawFactorBars(ctx, x, y, width, scores, rankTable) {
+    const rowH = 34, barH = 9;
+    const labelW = 62, rankW = 34;
+    const barX = x + labelW, barW = width - labelW - rankW;
+
+    ctx.textBaseline = 'middle';
+    FACTORS.forEach((f, i) => {
+      const midY = y + i * rowH + rowH / 2;
+
+      ctx.font = '15px "Zen Kaku Gothic New"';
+      ctx.fillStyle = '#9691B8';
+      ctx.textAlign = 'left';
+      ctx.fillText(FACTOR_LABEL[f] + '性', x, midY);
+
+      const barY = midY - barH / 2;
+      ctx.fillStyle = 'rgba(255,255,255,0.09)';
+      pillRect(ctx, barX, barY, barW, barH);
+      ctx.fill();
+
+      const pct = Math.max(0, Math.min(1, (scores[f] - 1) / 6));
+      const fillW = Math.max(barH, barW * pct);
+      const barGrad = ctx.createLinearGradient(barX, 0, barX + fillW, 0);
+      barGrad.addColorStop(0, FACTOR_COLOR[f] + '99');
+      barGrad.addColorStop(1, FACTOR_COLOR[f]);
+      ctx.fillStyle = barGrad;
+      pillRect(ctx, barX, barY, fillW, barH);
+      ctx.fill();
+
+      ctx.font = '700 17px "Zen Kaku Gothic New"';
       ctx.fillStyle = FACTOR_COLOR[f];
-      ctx.fillText(rank, cx, y);
-      cx += ctx.measureText(rank).width + 28;
-    }
-    return cx;
+      ctx.textAlign = 'right';
+      ctx.fillText(rankFor(scores[f], rankTable), x + width, midY);
+    });
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'alphabetic';
+    return y + FACTORS.length * rowH;
   }
 
   async function build({ name, catchphrase, imageKey, scores, rankTable }) {
@@ -132,59 +165,58 @@ const ShareCard = (() => {
       ctx.drawImage(img, dx, dy, dw, dh);
     } catch (e) { /* 画像取得に失敗しても文字だけで成立させる */ }
 
-    const textX = 540;
+    const textX = 540, textW = W - textX - 40;
 
     ctx.fillStyle = '#9691B8';
-    ctx.font = '24px "Zen Kaku Gothic New"';
-    ctx.fillText('あなたの転生キャラは', textX, 150);
+    ctx.font = '22px "Zen Kaku Gothic New"';
+    ctx.fillText('あなたの転生キャラは', textX, 138);
 
     const { job, proper } = splitName(name);
     if (job) {
       ctx.fillStyle = '#9691B8';
-      ctx.font = '22px "Zen Kaku Gothic New"';
-      ctx.fillText(job, textX, 185);
+      ctx.font = '20px "Zen Kaku Gothic New"';
+      ctx.fillText(job, textX, 170);
     }
+    const nameY = job ? 220 : 192;
     const nameGrad = ctx.createLinearGradient(textX, 0, textX + 500, 0);
     nameGrad.addColorStop(0, '#E9C87C');
     nameGrad.addColorStop(0.6, '#D4A34E');
     nameGrad.addColorStop(1, '#B9863A');
     ctx.fillStyle = nameGrad;
-    ctx.font = '800 46px "Shippori Mincho"';
-    ctx.fillText(proper, textX, job ? 240 : 210);
+    ctx.font = '800 42px "Shippori Mincho"';
+    ctx.fillText(proper, textX, nameY);
 
     ctx.fillStyle = '#9691B8';
-    ctx.font = '20px "Zen Kaku Gothic New"';
-    ctx.fillText('あなたの性格を一言で表すと', textX, 320);
+    ctx.font = '18px "Zen Kaku Gothic New"';
+    ctx.fillText('あなたの性格を一言で表すと', textX, nameY + 52);
 
     const catchGrad = ctx.createLinearGradient(textX, 0, textX + 560, 0);
     catchGrad.addColorStop(0, '#ffffff');
     catchGrad.addColorStop(0.55, '#E9C87C');
     catchGrad.addColorStop(1, '#D4A34E');
     ctx.fillStyle = catchGrad;
-    ctx.font = '800 44px "Shippori Mincho"';
-    const catchLines = wrapText(ctx, catchphrase, W - textX - 60);
-    const catchStartY = 375, catchLineH = 54;
+    ctx.font = '800 38px "Shippori Mincho"';
+    const catchLines = wrapText(ctx, catchphrase, textW);
+    const catchStartY = nameY + 92, catchLineH = 46;
     catchLines.forEach((line, i) => ctx.fillText(line, textX, catchStartY + i * catchLineH));
 
-    // 因子ランクの行（要素を足りなく見せないための追加情報。特殊キャラでも本人スコアは常に存在する）
+    // 因子の棒グラフ（結果ページと同じ見せ方。余白を埋める主要素。特殊キャラでも本人スコアは常にある）
     const afterCatchY = catchStartY + (catchLines.length - 1) * catchLineH;
-    const dividerY = afterCatchY + 46;
-    const factorY = dividerY + 40;
-    if (scores && rankTable) {
-      ctx.fillStyle = 'rgba(255,255,255,0.08)';
-      ctx.fillRect(textX, dividerY, W - textX - 40, 1);
-      drawFactorRow(ctx, textX, factorY, scores, rankTable);
-    }
+    const dividerY = afterCatchY + 30;
+    ctx.fillStyle = 'rgba(255,255,255,0.08)';
+    ctx.fillRect(textX, dividerY, textW, 1);
+    const barsBottomY = scores && rankTable
+      ? drawFactorBars(ctx, textX, dividerY + 20, textW, scores, rankTable)
+      : dividerY;
 
     // フッター: 診断への誘導文＋URL
-    const ctaY = factorY + 46;
     ctx.fillStyle = '#c9bdf2';
-    ctx.font = '700 20px "Zen Kaku Gothic New"';
-    ctx.fillText('あなたも診断してみませんか？', textX, ctaY);
+    ctx.font = '700 18px "Zen Kaku Gothic New"';
+    ctx.fillText('あなたも診断してみませんか？', textX, barsBottomY + 32);
 
     ctx.fillStyle = '#E9C87C';
     ctx.font = '700 24px "Zen Kaku Gothic New"';
-    ctx.fillText(location.hostname || 'isekai-tensei-shindan.com', textX, ctaY + 38);
+    ctx.fillText(location.hostname || 'isekai-tensei-shindan.com', textX, barsBottomY + 66);
 
     return new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
   }
