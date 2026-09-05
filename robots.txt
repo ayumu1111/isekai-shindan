@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://isekai-tensei-shindan.com/sitemap.xml

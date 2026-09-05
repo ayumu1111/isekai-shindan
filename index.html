@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>異世界転生診断</title>
 <meta name="description" content="29の質問に答えるだけの「異世界転生診断」。あなたが異世界に転生したらどんな職業になるかがわかります。診断結果は異世界転生ガチャのキャラクターから選ばれます。">
+<!-- シェア結果URL(?s=...)はSNSでのプレビュー用にCloudflare Workerが動的に
+     OGPを書き換えるが、検索エンジンには「同じページの一表示」として扱わせたいので
+     canonicalは常にクエリ無しのルートを指す(結果URLが別ページとして重複インデックス
+     されるのを防ぐ) -->
+<link rel="canonical" href="https://isekai-tensei-shindan.com/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <!-- 以下のOGP/Twitterタグは、シェア結果URL(?s=...)へのクローラーアクセス時のみ
      Cloudflare Workerが結果に応じた内容に書き換える。既定値はサイト全体の代表値。 -->
 <meta property="og:type" content="website">
@@ -24,6 +32,65 @@
      js/ads.jsが結果表示直前に行う。ADSENSE_CLIENT_ID(js/ad-config.js)と揃えること -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8202611626707436"
      crossorigin="anonymous"></script>
+<!-- 構造化データ(検索結果でのリッチリザルト・サイト理解の補助用) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "異世界転生診断",
+  "url": "https://isekai-tensei-shindan.com/",
+  "description": "29の質問に答えるだけの性格診断。あなたが異世界に転生したらどんな職業になるかがわかります。",
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "異世界転生診断とはどんな診断ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "29個の質問に答えると、あなたの性格から「異世界に転生したらどんな職業になるか」がわかる無料の簡易診断です。心理学のBig Five理論の構成を参考にした独自の診断で、学術的な性格検査ではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "何問ありますか？所要時間はどれくらいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "全29問で、キャラクターが1問ずつ話しかけてくるRPGの会話のような形式で答えていきます。所要時間は約3分です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "診断結果はどうやって決まるのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "回答から算出した5つの性格因子のスコアをもとに、最も近い性格のキャラクターが55通りの中から選ばれます。結果ページでは因子ごとのランクやキャラクターからのコメントも見られます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "異世界転生ガチャとはどんな関係がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "診断結果は、姉妹サイト「異世界転生ガチャ」に登場するキャラクターの中から選ばれます。ただし診断結果とガチャで実際に引けるキャラクターは連動しておらず、ガチャは完全ランダムの抽選です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "診断結果はシェアできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結果ページの「結果をシェアする」から、キャラクターと二つ名を含む画像付きでSNSに共有できます。共有されたリンクを開くと、同じ結果をそのまま確認できます。"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -48,6 +115,30 @@
       本診断は心理学のBig Five理論の構成を参考にした独自の簡易診断であり、学術的な性格検査ではありません。<br>
       結果はエンタメ目的でお楽しみください。
     </p>
+
+    <section class="faq" aria-labelledby="faqHeading">
+      <h2 id="faqHeading" class="faq-heading">よくある質問</h2>
+      <details class="faq-item">
+        <summary>異世界転生診断とはどんな診断ですか？</summary>
+        <p>29個の質問に答えると、あなたの性格から「異世界に転生したらどんな職業になるか」がわかる無料の簡易診断です。心理学のBig Five理論の構成を参考にした独自の診断で、学術的な性格検査ではありません。</p>
+      </details>
+      <details class="faq-item">
+        <summary>何問ありますか？所要時間はどれくらいですか？</summary>
+        <p>全29問で、キャラクターが1問ずつ話しかけてくるRPGの会話のような形式で答えていきます。所要時間は約3分です。</p>
+      </details>
+      <details class="faq-item">
+        <summary>診断結果はどうやって決まるのですか？</summary>
+        <p>回答から算出した5つの性格因子のスコアをもとに、最も近い性格のキャラクターが55通りの中から選ばれます。結果ページでは因子ごとのランクやキャラクターからのコメントも見られます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>異世界転生ガチャとはどんな関係がありますか？</summary>
+        <p>診断結果は、姉妹サイト「異世界転生ガチャ」に登場するキャラクターの中から選ばれます。ただし診断結果とガチャで実際に引けるキャラクターは連動しておらず、ガチャは完全ランダムの抽選です。</p>
+      </details>
+      <details class="faq-item">
+        <summary>診断結果はシェアできますか？</summary>
+        <p>結果ページの「結果をシェアする」から、キャラクターと二つ名を含む画像付きでSNSに共有できます。共有されたリンクを開くと、同じ結果をそのまま確認できます。</p>
+      </details>
+    </section>
   </section>
 
   <!-- ==================== 診断回答画面 ==================== -->

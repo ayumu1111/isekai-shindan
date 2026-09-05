@@ -68,6 +68,24 @@ a { color: inherit; }
 .intro-meta b { color: var(--gold); font-family: var(--font-display); font-weight: 400; display: block; font-size: 16px; margin-bottom: 2px; }
 .intro-note { margin-top: 18px; font-size: 11px; color: var(--text-dim); line-height: 1.7; }
 
+.faq { margin-top: 36px; text-align: left; }
+.faq-heading {
+  font-family: var(--font-display); font-weight: 400; font-size: 15px; color: var(--gold);
+  text-align: center; margin: 0 0 14px; letter-spacing: 0.03em;
+}
+.faq-item {
+  border: 1px solid var(--border-soft); border-radius: 10px;
+  background: rgba(255,255,255,0.02); margin-bottom: 8px; overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer; padding: 12px 14px; font-size: 13px; color: var(--text);
+  list-style: none; display: flex; align-items: center; gap: 8px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before { content: "+"; color: var(--gold); font-family: var(--font-display); flex: 0 0 auto; }
+.faq-item[open] summary::before { content: "−"; }
+.faq-item p { margin: 0; padding: 0 14px 14px 36px; font-size: 12.5px; line-height: 1.8; color: var(--text-sub); }
+
 /* ==================== 診断回答画面 ==================== */
 #screen-quiz { position: relative; }
 .mural-bar {
