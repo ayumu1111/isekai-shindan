@@ -193,12 +193,14 @@ a { color: inherit; }
 
 #screen-result .char-portrait {
   margin-top: 22px; width: 100%; height: 230px; border-radius: 12px;
-  background: linear-gradient(155deg, rgba(212,163,78,.18), rgba(155,126,222,.10)), var(--r-surface);
+  background:
+    radial-gradient(circle at 50% 62%, rgba(233,200,124,0.38), rgba(233,200,124,0) 62%),
+    linear-gradient(155deg, rgba(212,163,78,.18), rgba(155,126,222,.10)), var(--r-surface);
   border: 1px solid var(--r-surface-line);
   display: flex; align-items: flex-end; justify-content: center;
   overflow: hidden; position: relative;
 }
-#screen-result .char-portrait img { height: 100%; width: auto; max-width: 90%; object-fit: contain; object-position: bottom; }
+#screen-result .char-portrait img { height: 100%; width: auto; max-width: 90%; object-fit: contain; object-position: bottom; position: relative; z-index: 1; }
 
 #screen-result .rank-note {
   margin-top: 14px; font-size: 11.5px; line-height: 1.6; color: var(--r-text-dim);
