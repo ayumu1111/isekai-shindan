@@ -17,16 +17,23 @@ function hasRealAds() {
 
 // adsbygoogle.js自体は一度だけ読み込む。ADSENSE_CLIENT_IDが無い間はこの関数は
 // 呼ばれないため、広告アカウント未設定の状態ではネットワークリクエストが一切発生しない。
+// index.html <head> にサイト確認/Auto ads用の同じスクリプトタグを静的に置いてあるため、
+// テストモードでない通常時はそれをそのまま使い、二重読み込みしない。
 let adsbygoogleLoadPromise = null;
 function loadAdsbygoogleScript() {
   if (adsbygoogleLoadPromise) return adsbygoogleLoadPromise;
+  const src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + encodeURIComponent(ADSENSE_CLIENT_ID);
+  const alreadyInHead = !ADSENSE_TEST_MODE && document.querySelector(`script[src="${src}"]`);
+
   adsbygoogleLoadPromise = new Promise((resolve, reject) => {
     window.adsbygoogle = window.adsbygoogle || [];
     window.adBreak = window.adConfig = function (o) { window.adsbygoogle.push(o); };
+    if (alreadyInHead) { resolve(); return; }
+
     const script = document.createElement('script');
     script.async = true;
     script.crossOrigin = 'anonymous';
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + encodeURIComponent(ADSENSE_CLIENT_ID);
+    script.src = src;
     if (ADSENSE_TEST_MODE) script.setAttribute('data-adbreak-test', 'on');
     script.onload = () => resolve();
     script.onerror = () => reject(new Error('adsbygoogle.js load failed'));
@@ -36,15 +43,23 @@ function loadAdsbygoogleScript() {
 }
 
 // Google Ad Placement API のインタースティシャル(adBreak type:'next')を再生する。
-// オプトインの確認は挟まず、beforeAd/afterAdの間だけ待つ。広告在庫なし等でadBreak自体が
-// 始まらなかった場合はadBreakDoneで即resolveし、読み込み失敗時もcatchで進行を止めない。
+// オプトインの確認は挟まず、afterAdまで待つ。広告在庫なし等でadBreak自体が
+// 始まらなかった場合はadBreakDoneで即resolveする想定だが、実機検証で
+// 「未検証ドメイン(localhost等)ではafterAdもadBreakDoneも一切呼ばれず
+// Promiseが永久に解決しない」ケースを確認した。診断がそれで詰まっては
+// 本末転倒なので、AD_RESOLVE_TIMEOUT_MS経過しても応答が無ければ強制的に
+// 進める安全策を必ず入れる。読み込み失敗時もcatchで進行を止めない。
+const AD_RESOLVE_TIMEOUT_MS = 10000;
 function playRealInterstitialAd() {
   return loadAdsbygoogleScript().then(() => new Promise(resolve => {
+    let settled = false;
+    const finish = () => { if (!settled) { settled = true; resolve(); } };
+    const timeoutId = setTimeout(finish, AD_RESOLVE_TIMEOUT_MS);
     window.adBreak({
       type: 'next',
       name: 'result-reveal',
-      afterAd: () => resolve(),
-      adBreakDone: () => resolve()
+      afterAd: () => { clearTimeout(timeoutId); finish(); },
+      adBreakDone: () => { clearTimeout(timeoutId); finish(); }
     });
   })).catch(() => undefined);
 }
@@ -82,11 +97,23 @@ function playSimulatedAd() {
 
 // main.jsから呼ぶ入口。実広告が使える場合だけオーバーレイのUIを出しつつ本物のadBreakを
 // 呼ぶ（Googleの広告プレイヤー自体が全画面表示になるため、下敷きのオーバーレイは
-// 「結果を準備しています」の一瞬のつなぎとして軽く見せておく）。
+// 「結果を準備しています」の一瞬のつなぎとして軽く見せておく）。実広告は所要時間が
+// 読めないため、疑似演出のような正確なカウントダウンにはせず、じわじわ進んで止まる
+// 「読み込み中」の表現にする（止まって見えても壊れて見えないようにするため）。
 async function playResultAd() {
   if (hasRealAds()) {
     const overlay = document.getElementById('adOverlay');
+    const fill = document.getElementById('adProgressFill');
+    const note = document.getElementById('adOverlayNote');
+    note.textContent = '広告を読み込んでいます…';
+    fill.style.transition = 'none';
+    fill.style.width = '0%';
     overlay.hidden = false;
+    void overlay.offsetWidth;
+    requestAnimationFrame(() => {
+      fill.style.transition = `width ${AD_RESOLVE_TIMEOUT_MS * 0.9}ms ease-out`;
+      fill.style.width = '85%';
+    });
     try {
       await playRealInterstitialAd();
     } finally {

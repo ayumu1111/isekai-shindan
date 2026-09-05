@@ -12,7 +12,7 @@
 // 上記が揃ったら、AdSenseの管理画面で発行される "ca-pub-XXXXXXXXXXXXXXXX" 形式の
 // クライアントIDをここに書き込むだけで、js/ads.jsが自動的に本物のインタースティシャル
 // 広告(adBreak type:'next')を使うようになる。
-const ADSENSE_CLIENT_ID = null; // 例: 'ca-pub-1234567890123456'
+const ADSENSE_CLIENT_ID = 'ca-pub-8202611626707436';
 
 // true にすると、Googleのテストモード(モック広告、実際の広告リクエストを送らない)で
 // 動作を確認できる。本番公開前には必ず false に戻すこと（テストモードのままだと

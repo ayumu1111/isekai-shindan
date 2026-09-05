@@ -20,6 +20,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<!-- AdSenseサイト確認/Auto ads用。実際のリワード広告(H5 Games Ads)呼び出しは
+     js/ads.jsが結果表示直前に行う。ADSENSE_CLIENT_ID(js/ad-config.js)と揃えること -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8202611626707436"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="wrap">
@@ -136,7 +140,7 @@
     <div class="ad-overlay-inner">
       <div class="ad-overlay-label">結果を準備しています…</div>
       <div class="ad-progress-track"><div class="ad-progress-fill" id="adProgressFill"></div></div>
-      <div class="ad-overlay-note">広告のご協力で無料でご利用いただけます（あと<span id="adSeconds">4</span>秒）</div>
+      <div class="ad-overlay-note" id="adOverlayNote">広告のご協力で無料でご利用いただけます（あと<span id="adSeconds">4</span>秒）</div>
     </div>
   </div>
 
